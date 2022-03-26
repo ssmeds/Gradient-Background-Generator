@@ -11,12 +11,12 @@ color2.value = "#FFFF00";
 //Sets background gradience to input choices
 function backgroundColor() {
 	body.style.background = "linear-gradient(to right, " + color1.value
-	+ ", " + color2.value + ")";
-	css.textContent = body.style.background + ";";
+		+ ", " + color2.value + ")";
+	css.textContent = body.style.background;
 }
 
 //Displays the default values as a text
-body.onload = function() {
+body.onload = function () {
 	backgroundColor();
 }
 
@@ -27,14 +27,14 @@ function backgroundColorChange() {
 
 //Randomizes two colors
 function randomColor() {
-	var randomColor1 = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
-    var randomColor2 = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
+	var randomColor1 = '#' + (Math.random() * 0xFFFFFF << 0).toString(16);
+	var randomColor2 = '#' + (Math.random() * 0xFFFFFF << 0).toString(16);
 	body.style.background = "linear-gradient(to right, " + randomColor1 + ", " + randomColor2 + ")";
-	
+
 	color1.value = randomColor1;
 	color2.value = randomColor2;
 
-	css.textContent = body.style.background + ";";
+	css.textContent = body.style.background;
 }
 
 
